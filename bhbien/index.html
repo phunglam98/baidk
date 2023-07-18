@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<h1><input type="number" id="s">nhập điểm sinh</h1>
+<h1><input type="number" id="h">nhập điểm hóa</h1>
+<h1><input type="number" id="l">nhập điểm lý</h1>
+<button onclick="diem()">điểm trung bình</button>
+<script>
+   function diem() {
+       let a = +document.getElementById("s").value;
+       let b = +document.getElementById("h").value;
+       let c = +document.getElementById("l").value;
+       let d = (a+b+c)/3
+       alert(d)
+   }
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
