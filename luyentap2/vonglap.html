@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+-Vòng lặp thực hiện những công việc tương tự nhau với số lần biết trước hoặc số lần chưa biết trước.
+-Vòng lặp trong JavaScript thì chia ra làm hai loại:
++Lặp với số lần biết trước ta sử dụng vòng lặp for hoặc vòng lặp for in.
++Lặp với số lần chưa biết trước thì ta có vòng lặp while, do while.
+Vòng lặp for:
+VD:
+for (let i = 0; i < 10; i++)
+{
+console.log(i)
+}
+let i = 0 : khởi tạo biến cho vòng lặp
+i < 10 : điều kiện để vòng lặp thực hiện
+i++ : tăng giá trị biến chạy lên 1 mỗi khi thực hiện xong hành động
+
+Lệnh break: break được dùng để kết thúc vòng lặp, hoặc cấu trúc switch case, đúng
+như ý nghĩa của nó break “phá vỡ” nó dùng để “phá vỡ” vòng lặp hoặc cấu trúc switch case.
+VD:
+for(var i = 1; i =< 10; i++)
+{
+console.log(i);
+if(i == 4)
+{
+console.log("Stop !!!");
+break;
+}
+}
+Mình khởi tạo một vòng lặp for và cho nó lặp 10 lần
+Như bình thường thì vòng lặp sẽ in ra giá trị của i từ 1 đến 10
+Tuy nhiên mình đã sử dụng lệnh break khi i = 4
+Vòng lặp dừng khi i = 4 in ra chuỗi “Stop !!!”
+
+Lệnh continue:
+Khác hoàn toàn với lệnh break, lệnh continue trong javascript có
+tác dụng bỏ qua một bước lặp nào đó, nghĩa là lúc gặp lệnh continue
+thì tất cả những đoạn code nằm bên dưới sẽ không được thực hiện
+mà nó sẽ nhảy qua vòng lặp mới luôn.
+VD:
+for (var i = 1; i <= 10; i++)
+{
+if (i == 4) {
+continue;
+}
+console.log(i);
+}
+Bỏ qua giá trị 4
+For lồng nhau:
+VD:
+var number = 1;
+for(i = 0; i < 10; i++){
+for(j = 0; j < 5; j++){
+document.write(number + " ");
+number++;
+}
+}
+Vòng lặp while:
+- Vòng lặp while dùng để lặp lại việc thực thi một đoạn mã nếu điều kiện mà ta đưa ra vẫn còn đúng.
+VD:
+var i = 1;
+while(i < 10){
+document.write(i + "<br>");
+i++;
+}
+Vòng lặp do while:
+- Vòng lặp do while dùng để lặp lại việc thực thi một đoạn mã nếu điều kiện mà ta đưa ra vẫn còn đúng.
+var i = 1;
+do{
+document.write(i + "<br>");
+i++;
+}while(i < 10);
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>ax2+bx+c=0 <br>
+    Δ=b2-4ac</h1>
+<script>
+    let a = +prompt("nhập a")
+    let b = +prompt("nhập b")
+    let c = +prompt("nhập c")
+    let delta = b * b - 4 * a * c
+    let x1 = 0
+    let x2 = 0
+    if (a == 0) {
+        x1 = x2 = -c / b
+        alert("x1 = x2 = " + x1)
+    }
+    else {
+        if (delta == 0) {
+            x1 = -b / (2 * a)
+            alert("x1 = x2 = " + x1)
+        }
+        else if (delta > 0) {
+            x1 = (-b + Math.sqrt(delta)) / (2 * a)
+            x1 = (-b - Math.sqrt(delta)) / (2 * a)
+            alert("x1= " + x1 + " x2= " + x2)
+        } else {
+            alert("vô nghiệm")
+        }
+    }
+</script>
+
+</body>
+</html>
