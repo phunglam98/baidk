@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra cac số từ a đến b, mỗi số trong 1 thẻ <h1></title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+  let a = +prompt('nhap a')
+  let b = +prompt("Nhập b");
+  let result = ''
+  for (let i = a; i <= b ; i++) {
+    result = result + '<h1>' + i + '</h1>'
+  }
+  document.getElementById('result').innerHTML = result;
+</script>
+</body>
+</html>

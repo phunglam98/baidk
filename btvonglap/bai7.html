@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra các số từ a đến b số chẵn trong h2, so le trong h1;</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    let a = +prompt('nhap a');
+    let b = +prompt('nhap b');
+    let result = ''
+    for (let i = a; i <= b; i++) {
+        if (i % 2 === 0) {
+            result = result + '<h1>' + i + '</h1>'
+        }
+        if (i % 2 !== 0) {
+            result = result + '<h2>' + i + '</h2>'
+        }
+    }
+
+    document.getElementById('result').innerHTML = result;
+
+</script>
+</body>
+</html>
