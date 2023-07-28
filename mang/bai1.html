@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>In ra tổng các phần tử chẵn trong mảng</title>
 </head>
 <body>
-$END$
+<script>
+    let a = [1,4,6,3,5,7,9,];
+    let tong = 0
+    for (let i = 0; i < a.length; i++) {
+        if (a[i]%2===0){
+            console.log(a[i])
+             tong +=a[i]
+        }
+
+    }console.log(tong)
+</script>
 </body>
 </html>

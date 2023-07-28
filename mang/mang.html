@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>lãi mẹ để lãi con</title>
+    <title>Mảng</title>
 </head>
 <body>
 <script>
-let name1 = 'lâm'
-let name2 = 'linh'
-let name3 = 'đề'
-let studenc06 = ['linh','lam','dan']
+// let name1 = 'lâm'
+// let name2 = 'linh'
+// let name3 = 'đề'
+// let studenc06 = ['linh','lam','dan']
 //các khái niệm lu ý
 // độ dài của mảng
 //vị trí(index): là nơi các phần tử nằm, bắt đau từ 0 phần tử cuô cùng là vị trí length
@@ -18,8 +18,47 @@ let studenc06 = ['linh','lam','dan']
 //alert(studenc06[2])//lấy ra giá trị studentc06 ở vị trí 2
 //studenc06[1] = 'đức';//thay thế giá trị tại vị trí thứ nhất của studenc06
 //alert(studenc06[1])
-for (let  i = 0; i < studenc06.length ; i++) {
-  console.log(studenc06[i])
+// for (let  i = 0; i < studenc06.length ; i++) {
+//     console.log(studenc06[i])
+
+//  let abc = [1, 'linh',true,0.5,{name: 'dan'}]
+// mảng trong js có thể lưu trữ nhiều kiểu giá trị
+// let studenc06 = [];
+// studenc06.push('dan');
+// studenc06.push('lam');
+// studenc06.push('linh');
+// console.log(studenc06);
+// studenc06.pop();
+// console.log("sau khi xoa =======>")
+// console.log(studenc06);
+// console.log("sau khi sử dụng join-------")
+// console.log(studenc06.join(';'))// chuyển từ mảng thành chuỗi
+//
+//
+// let studenc07 = ['linh', 'lam'];
+// console.log(studenc06.concat(studenc07)); // gộp 2 mảng lại với nhau
+//
+// let arr = [1,2,4,3,5,6] // sắp xếp mảng
+// console.log("mảng sau khi được sắp xếp-------");
+// console.log(arr.sort());
+
+// bài tập
+let a =[1,5,7,9,0,6]
+// for (let i = 0; i < a.length; i++) {
+//     console.log(a[i])
+// }
+
+//console.log("in ra các phân tử chẵn trong mảng")
+// for (let i = 0; i < a.length; i++) {
+//     if (a[i]%2===0){
+//         console.log(a[i])
+//     }
+// }
+//console.log("in ra vị trí chẵn trong mảng")
+for (let i = 0; i < a.length; i++) {
+    if (i%2===0){
+        console.log(a[i])
+    }
 }
 </script>
 
