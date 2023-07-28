@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Để tìm số lớn nhất trong một mảng hai chiều trong JavaScript, <br>
+      có thể sử dụng hai vòng lặp lồng nhau để duyệt qua các phần tử của mảng và so sánh chúng với giá trị lớn nhất hiện tại.</title>
+</head>
+<body>
+<script>
+  let arr = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+  ];
+
+  let max = arr[0][0];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (max < arr[i][j]) {
+        max = arr[i][j];
+      }
+    }
+  }
+
+  console.log(max);
+</script>
+<p>
+  Trong ví dụ trên, chúng ta khởi tạo biến max bằng giá trị của phần tử đầu tiên của mảng (arr[0][0]). <br>
+  Sau đó, chúng ta sử dụng hai vòng lặp for lồng nhau để duyệt qua các phần tử của mảng. <br>
+  Trong mỗi lần lặp, chúng ta sử dụng câu lệnh if để kiểm tra xem giá trị của phần tử hiện tại có lớn hơn giá trị
+  lớn nhất hiện tại hay không. <br>
+  Nếu có, chúng ta cập nhật giá trị của max bằng giá trị của phần tử hiện tại. <br>
+  Cuối cùng, chúng ta sử dụng console.log(max) để in ra giá trị lớn nhất của mảng. <br>
+  Kết quả khi chạy đoạn code trên sẽ là 6, là giá trị lớn nhất trong mảng arr. <br>
+</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo/nhập vào một mảng số nguyên bao gồm 10 phần tử.
+      Array sắp xếp chương trình theo thứ tự giảm dần và hiển thị các mảng sắp xếp</title>
+</head>
+<body>
+<script>
+  let ar = [1, 2, 3, 4, 5, 60, 75, 8, 9, 0];
+  console.log(ar.sort((a,b) => {
+    if (a > b) {
+      return -1;
+    } else {
+      return 0
+    }
+  }).join())
+</script>
+</body>
+</html>

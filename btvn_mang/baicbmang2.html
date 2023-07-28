@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mảng 2</title>
+</head>
+<body>
+<p>Mảng hai chiều trong JavaScript là một mảng chứa các mảng con,<br>
+  trong đó mỗi mảng con có thể chứa các phần tử hoặc các mảng khác. <br>
+
+
+  Một ví dụ về mảng hai chiều trong JavaScript là:</p>
+<script>
+  let arr = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+  ];
+</script>
+<p>Trong ví dụ trên, arr là một mảng hai chiều với 3 hàng và 2 cột.<br>
+  Để truy cập vào phần tử tại hàng thứ i và cột thứ j, ta sử dụng cú pháp arr[i][j].<br>
+  Ví dụ, để lấy giá trị tại hàng thứ 2 và cột thứ 1, ta sử dụng arr[1][0] và kết quả sẽ là 3.</p>
+<p>
+  Để duyệt qua các phần tử của một mảng hai chiều trong JavaScript,<br>
+  có thể sử dụng hai vòng lặp lồng nhau. Vòng lặp ngoài sẽ duyệt qua các hàng của mảng, <br>
+  còn vòng lặp trong sẽ duyệt qua các cột của mỗi hàng<br>
+  . Dưới đây là một ví dụ: <br>
+</p>
+<script>
+  let arr = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+  ];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      console.log(arr[i][j]);
+    }
+  }
+</script>
+<p>Trong ví dụ trên, chúng ta sử dụng hai vòng lặp for lồng nhau để duyệt qua các phần tử của mảng hai chiều arr. <br>
+  Vòng lặp ngoài sẽ duyệt qua các hàng của mảng bằng cách sử dụng biến i chạy từ 0 đến arr.length - 1. <br>
+  Vòng lặp trong sẽ duyệt qua các cột của mỗi hàng bằng cách sử dụng biến j chạy từ 0 đến arr[i].length - 1. <br>
+  Trong mỗi lần lặp, chúng ta sử dụng console.log(arr[i][j]) để in ra giá trị của phần tử tại hàng thứ i và cột thứ j.</p>
+</body>
+</html>

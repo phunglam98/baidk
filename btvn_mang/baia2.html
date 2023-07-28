@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi động tạo mảng số nguyên bao gồm 10 phần tử khác nhau.
+      Chương trình hiển thị phần tử được đánh giá cao nhất trong mảng và vị trí của phần tử đó</title>
+</head>
+<body>
+<script>
+  let array= [1,2,4,6,8,10,11,14,15,17]
+
+  let count = 0
+  let max = 0
+  for (let i = 0; i <array.length; i++) {
+    if (max< array[i]){
+      max = array[i]
+      count=i
+    }
+  }
+  console.log(max);
+  console.log(count)
+</script>
+</body>
+</html>

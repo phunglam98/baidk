@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm min thì cũng tương tự tạo phần tử min bằng phần tử đầu cho 2 vòng lặp duyệt qua tất cả các phần tử <br>
+      nếu min lớn hơn phần tử đang so sánh, chuyển phần tử đó thành min</title>
+</head>
+<body>
+<script>
+
+    [1, 2],
+    [3, 4],
+    [5, 6]
+  ];
+
+  let min = arr[0][0];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] < min) {
+        min = arr[i][j];
+      }
+    }
+  }
+
+  console.log(min);
+</script>
+</body>
+</html>

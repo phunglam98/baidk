@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi động tạo mảng số nguyên bao gồm 10 phần tử.
+        Chương trình thực hiện tính toán và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10</title>
+</head>
+<body>
+<script>
+    let array= [1,2,4,6,8,10,11,14,15,17]
+    array.sort()
+    let count = 0
+    for (let i = 0; i < array.length; i++) {
+        if(array[i]>=10) {
+            console.log(array[i])
+            count ++
+        }
+    }
+    console.log('tổng số số nguyên lớn hơn hoặc bằng 10 là: '+ count)
+</script>
+</body>
+</html>

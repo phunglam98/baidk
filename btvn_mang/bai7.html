@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  let v = +prompt('nhập số nguyên tố V');
+  if (ar.indexOf(v)>=0){
+    console.log(v+ "thuộc mảng ar")
+    ar.splice(ar.indexOf(v),1)
+    console.log("mảng sau khi xóa "+v+ " là: "+ar)
+  } else {
+    console.log("số vừa nhập không thuộc mảng")
+  }
+</script>
+</body>
+</html>
