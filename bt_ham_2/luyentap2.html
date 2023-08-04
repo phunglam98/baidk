@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+  // function binhPhuong(x){
+  //   return x*x
+  // }alert(binhPhuong(6))
+
+  //         Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+  function sHinhTron(r) {
+    let s = r*r*3.14
+      return s;
+  }alert(sHinhTron(5))
+  // Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+  function tinhGiaithua(x) {
+      let gthua = 1;
+      for (let i = 1; i <= x; i++) {
+          gthua *= i;
+      }
+      return gthua;
+  }alert(tinhGiaithua(5))
+
+  //         Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+  //         Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+  function kiemtraKytu(x) {
+      if (!isNaN)
+          return true;
+      return false;
+  }alert(kiemtraKytu(1))
+  //         Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+  function minNum(a, b, c) {
+      if (a > b) {
+          if (b > c) {
+              return c;
+          } else {
+              return b;
+          }
+      } else {
+          if (a > c) {
+              return c;
+          } else {
+              return a;
+          }
+      }
+  }alert(minNum(1,2,3))
+  //         Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+  //         Nếu là nguyên dương trả về true, ngược lại trả về false.
+  function kiemtraSoguyenduong(x) {
+
+      if (x > 0 && Number.isInteger(x)) {
+          return true;
+      } else {
+          return false;
+      }
+  }alert(kiemtraSoguyenduong(2))
+
+  //         Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+  function swap(a, b) {
+      // console.log(`Trước khi đổi chỗ: a = ${a}<br>b = ${b}`);
+      let temp = a;
+      a = b;
+      b = temp;
+      // console.log(`Sau khi đổi chỗ : a = ${a}<br>b = ${b}`);
+      return `a = ${a} b = ${b}`
+  }
+  alert(swap(2,3));
+  //         Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+  function daonguocmang(arr) {
+      let first = 0;
+      let last = arr.length - 1;
+      console.log(arr);
+      while (first < last) {
+          let temp = arr[first];
+          arr[first] = arr[last];
+          arr[last] = temp;
+          first++;
+          last--;
+      }
+      console.log(arr);
+  }
+  //         Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+  //         Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+  function timKytu(chuoi, x) {
+      let count = 0;
+      for (let i = 0; i < chuoi.length; i++) {
+          if (x === chuoi[i]) {
+              count++;
+          }
+      }
+      if (count != 0) {
+          return alert(`Ký tự xuất hiện ${count} lần`);
+      } else {
+          return alert(-1);
+      }
+  }
+</script>
+</body>
+</html>
