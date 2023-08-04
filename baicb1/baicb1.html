@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Đối tượng?  Lập trình hướng đối tượng là gì? </h1>
+<p>Trong lập trình hướng đối tượng, đối tượng được hiểu như là một thực thể: người, vật hoặc một bảng dữ liệu
+  . Một đối tượng bao gồm hai thông tin: thuộc tính và phương thức
+  . Thuộc tính chính là những thông tin, đặc điểm của đối tượng.
+  Ví dụ, con người có các đặc tính như mắt, mũi, tay, chân....
+  .Phương thức là những thao tác, hành động mà đối tượng đó có thể thực hiện
+  . Ví dụ, một người sẽ có thể thực hiện hành động nói, đi, ăn, uống...
+
+
+  Lập trình hướng đối tượng giúp code dễ phát triển và bảo trì hơn
+  . Đối tượng có thể tương ứng với các thực thể trong bài toán hoặc trong cuộc sống
+  . Đối tượng được tạo ra từ các lớp, là các bản thiết kế mã có thể tái sử dụng
+  . Đối tượng có thể tương tác với nhau.
+</p>
+<h1>Phương thức và thuộc tính của đối tượng là gì?</h1>
+<p>
+  Trong lập trình hướng đối tượng, đối tượng có hai thông tin chính là thuộc tính và phương thức.
+  Thuộc tính là những thông tin, đặc điểm của đối tượng.
+  Ví dụ, con người có các đặc tính như mắt, mũi, tay, chân…
+  Phương thức là những thao tác, hành động mà đối tượng đó có thể thực hiện.
+  Ví dụ, một người sẽ có thể thực hiện hành động nói, đi, ăn, uống…
+
+  Thuộc tính và phương thức được định nghĩa trong lớp của đối tượng.
+  Lớp là bản thiết kế mã có thể tái sử dụng để tạo ra các đối tượng.
+  Khi một đối tượng được tạo ra từ một lớp, nó sẽ kế thừa các thuộc tính và phương thức được định nghĩa trong lớp đó.
+</p>
+<h1>Cú pháp khai báo đối tượng</h1>
+<p>Trong JavaScript,có thể khai báo đối tượng bằng cách sử dụng cú pháp đối tượng theo nghĩa đen (literal object syntax)
+  hoặc cú pháp khởi tạo đối tượng (object constructor syntax).
+
+  - Cú pháp đối tượng theo nghĩa đen: Để khai báo một đối tượng mới bằng cách sử dụng cú pháp đối tượng theo nghĩa đen,
+  bạn sử dụng dấu ngoặc nhọn `{}`⁴. Ví dụ:
+  <script>
+    const myObject = {};
+  </script>
+
+  - Cú pháp khởi tạo đối tượng: Để khai báo một đối tượng mới bằng cách sử dụng cú pháp khởi tạo đối tượng,
+  sử dụng từ khóa `new` và hàm `Object(). Ví dụ:
+  <script>
+    const myObject = new Object();
+  </script>
+
+  Ngoài ra, bạn cũng có thể sử dụng phương thức `Object.create()` để tạo một đối tượng mới
+  từ một đối tượng nguyên mẫu (prototype object). Ví dụ:
+  <script>
+    const myObject = Object.create({});
+  </script>
+</p>
+<h1> Cú pháp khai báo lớp?</h1>
+<p>
+  Trong JavaScript, có thể khai báo một lớp mới bằng cách sử dụng từ khóa `class`.
+  Cú pháp cơ bản để khai báo một lớp mới trong JavaScript là như sau:
+  <script>
+    class MyClass {
+      // class methods
+      constructor() { ... }
+      method1() { ... }
+      method2() { ... }
+      method3() { ... }
+    ...
+    }
+  </script>
+  Sau đó, bạn có thể sử dụng `new MyClass()` để tạo một đối tượng mới với tất cả các phương thức được liệt kê
+  . Phương thức `constructor()` được gọi tự động bằng toán tử `new`,
+  vì vậy chúng ta có thể khởi tạo các đối tượng đó
+  . Ví dụ:
+  <script>
+    class User {
+      constructor(name) {
+        this.name = name;
+      }
+      sayHi() {
+        alert(this.name);
+      }
+    }
+
+    // Usage:
+    let user = new User("John");
+    user.sayHi();
+  </script>
+  Khi `new User("John")` được gọi:
+  - Một đối tượng mới được tạo ra.
+  - Việc constructor chạy với đối số đã cho và gán `this.name` cho nó.
+  - Sau đó chúng ta có thể gọi các phương thức đối tượng, chẳng hạn như `user.sayHi()`¹.
+</p>
+<h1>
+  Truy xuất thuộc tính và phương thức của lớp?
+</h1>
+<p>Trong lập trình hướng đối tượng, để truy xuất thuộc tính và phương thức của một đối tượng,
+  có thể sử dụng toán tử `.`
+  . Ví dụ, nếu bạn có một đối tượng `myObject` thuộc lớp `MyClass` và lớp này có một thuộc tính là `myAttribute` và
+  một phương thức là `myMethod()`, bạn có thể truy xuất thuộc tính và phương thức này như sau:
+  <script>
+    let attributeValue = myObject.myAttribute;
+    myObject.myMethod();
+  </script>
+  Tuy nhiên, cần lưu ý rằng việc truy xuất thuộc tính và phương thức của một đối tượng phụ thuộc vào quyền truy cập
+  (access modifier) của chúng¹.
+  Nếu một thuộc tính hoặc phương thức được khai báo với quyền truy cập `private`,
+  bạn sẽ không thể truy xuất chúng từ bên ngoài lớp¹.
+
+  .</p>
+</body>
+</html>
