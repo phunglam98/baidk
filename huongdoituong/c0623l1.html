@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let products = ['Dân', 'lâm', 'Đức'];
+
+  function showAll() {
+    let str = '';
+    for (let i = 0; i < products.length; i++) {
+      str += `<tr>
+      <td>${products[i]}</td>
+      <td><button onclick="showFormEdit(${i})">Sửa</button></td>
+      <td><button onclick="remove(${i})">Xóa</button></td>
+    </tr>`
+    }
+    document.getElementById("products").innerHTML = str;
+  }
+
+  showAll()
+
+  function create() {
+    let product = document.getElementById("add").value;
+    products.push(product);
+    showAll();
+  }
+
+  function remove(index) {
+    products.splice(index, 1);
+    showAll();
+  }
+
+  function showFormEdit(index) {
+    let productEdit = products[index];
+    let html = `
+    <input type="text" value="${productEdit}" id="productEdit">
+    <button onclick="edit(${index})">Save</button>
+    `
+    document.getElementById("edit").innerHTML = html;
+  }
+
+  function edit(index) {
+    let newProduct = document.getElementById("productEdit").value;
+    products[index] = newProduct;
+    saveProduct();
+    showAll();
+  }
+
+  function saveProduct(index) {
+    products[index] = document.getElementById("edit").value;
+    document.getElementById("edit").innerText = "";
+    showAll();
+  }
+</script>
+</body>
+</html>
