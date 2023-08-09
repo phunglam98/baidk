@@ -2,13 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Viết hàm nhập vào một mảng, trả về tổng các phần tử trong mảng.Sử dụng hàm.</title>
+    <title></title>
 </head>
 <body>
 <script>
+    //1. Viết hàm nhập vào một mảng, trả về tổng các phần tử trong mảng.Sử dụng hàm.
+    // let arr = [1,2,3,4,5,6,7,8,9]
+    //
+    // function tongPhanTu(arr) {
+    //     let sum = 0;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         sum += arr[i];
+    //     }
+    //     return sum;
+    // }
+    //
+    // console.log(tongPhanTu(arr));
+    //2. Viết hàm nhập vào một mảng, trả về tổng các phần tử lẻ trong mảng. Sử dụng hàm.
+    //let arr = [1,2,3,4,5,6,7,8,9]
+    // function tongSoLe(arr) {
+    //     let sum = 0;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i] % 2 != 0) {
+    //             sum += arr[i];
+    //         }
+    //     }
+    //     return sum;
+    // }
+    //
+    // console.log(tongSoLe(arr));
+    //
+    //3. Viết hàm nhập vào một mảng, trả về số lượng các phần tử lẻ trong mảng. Sử dụng hàm.
+    // function demSoLe(arr) {
+    //     let count = 0;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i] % 2 != 0) {
+    //             count++;
+    //         }
+    //     }
+    //     return count;
+    // }
+    //
+    // console.log(demSoLe(arr));
+    //
+    // 4. Sử dụng hàm ở ý 2 và 3. Tính trung bình các phần tử lẻ trong mảng.
+    // function tinhTBSoLe(arr) {
+    //     let avg = tongSoLe(arr) / demSoLe(arr);
+    //     console.log("Trung bình của các phần tử lẻ = " + avg);
+    // }
+    //
+    // tinhTBSoLe(arr);
 
+    //5. Viết hàm nhận vào 1 mảng và một số x, tìm x trong mảng. Nếu có trả về vị trí, không thì trả về -1. Sử dụng hàm.
+    // let n = prompt('Nhập mảng: ');
+    // let x = prompt('Nhập x: ');
+    // let arr = n.split('');
+    // function timViTri(arr) {
+    //     let index = arr.indexOf(x);
+    //     return index;
+    // }
+    // alert(timViTri(arr));
+    //6. Viết hàm nhận vào 1 mảng. Sử dụng hàm
+    // let n = prompt('Nhập mảng: ');
+    // function array(n) {
+    //     let arr = n.split('');
+    //     return arr;}
+    // alert(array(n))
+    //7. Sử dụng hàm ở ý 5 và 6. Viết hàm nhận vào một mảng, hiển thị vị trí của các phần tử có giá trị bằng max trong mảng.
+    // let n = prompt('Nhập mảng: ');
+    //
+    // function array(n) {
+    //     let arr = n.split('');
+    //     return arr;
+    // }
+    //
+    // function max(arr) {
+    //     array(n);
+    //     let max = arr[0];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (max < arr[i]) {
+    //             max = arr[i];
+    //         }
+    //     }
+    //     let viTri = timViTri(arr);
+    //     alert(viTri);
+    // }
+    //
+    // function timViTri(arr) {
+    //     let viTri = arr.indexOf(max);
+    //     return viTri;
+    // }
+    // max(arr)
+    //8. Viết hàm nhận vào một số, nếu là số nguyên tố, trả về true, không thì false. Sử dụng hàm.
+    let n = +prompt("Nhập số cần kiểm tra:");
 
+    function kiemTraSNT(n) {
+        if (n === 2) {
+            return true;
+        } else if (n === 1) {
+            return false;
+        } else {
+            for (let i = 2; i < n; i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    alert(kiemTraSNT(n))
+    //9. Sử dụng hàm ở 8. Viết hàm nhận 1 mảng, trả về số lượng số nguyên tố trong mảng. Sử dụng hàm.
+    // let n = +prompt("Nhập chuỗi");
+    // let arr = n.split('')
+    // let count = 0
 
+//     function kiemTraSNT(n) {
+//         if (n === 2) {
+//             return true;
+//         } else if (n === 1) {
+//             return false;
+//         } else {
+//             for (let j = 2; j < n; j++) {
+//                 if (n % j === 0) {
+//                     return false;
+//                 }
+//             }
+//             return true;
+//         }
+//     }
+//     //7.7. Sử dụng hàm ở ý 5 và 6. Viết hàm nhận vào một mảng, hiển thị vị trí của các phần tử có giá trị bằng max trong mảng.
+// function hienThiViTri(arr) {
+//     let max = timmax(arr)
+//
+// }
 </script>
+
+
 </body>
 </html>

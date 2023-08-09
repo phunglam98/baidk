@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Product {
+        id;
+        name;
+        quality;
+        price;
+
+        constructor(idInput, nameInput, qualityInput, priceInput) {
+            this.id = idInput;
+            this.name = nameInput;
+            this.quality = qualityInput;
+            this.price = priceInput;
+        }
+
+        getidInput() {
+            return this.id
+        }
+
+        setid(idInput) {
+            this.id = idInput;
+        }
+
+        getname() {
+            return this.name;
+        }
+
+        setname(nameInput) {
+            this.name = nameInput;
+        }
+
+        getquality(qualityInput) {
+            this.quality = qualityInput;
+        }
+
+        setquality(qualityInput) {
+            this.quality = qualityInput;
+        }
+
+        getprice(priceInput) {
+            this.price = priceInput;
+        }
+
+        setprice(priceInput) {
+            this.price = priceInput;
+        }
+    }
+
+    class Store {
+        listProducts;
+        name;
+        constructor(nameInput) {
+            this.name = nameInput;
+            this.listProducts = []
+        }
+        add(newProduct) {
+            this.listProducts.push(newProduct)
+        }
+        findAll() {
+            return this.listProducts;
+        }
+        remove(index) {
+            return this.listProducts.splice(index, 2)
+        }
+        edit(index, newProduct) {
+            this.listProducts[index] = newProduct
+        }
+    }
+    function main() {
+        let shop = new Store(" của hàng")
+        let sp1 = new Product(1, 'bánh mì', 'tốt', 5000);
+        shop.add(sp1);
+        let sp2 = new Product(2, 'bánh nếp', 'khá', 3000);
+        shop.add(sp2);
+        let sp3 = new Product(3, 'bánh tẻ', 'trung bình', 4000);
+        shop.add(sp3);
+        shop.remove(2)
+        let sp4 = new Product(4, 'bánh ruốc', 'tốt', 7000);
+        shop.add(sp4);
+        let sp5 = new Product(5, 'bánh tiêu', 'khá', 1000);
+        shop.add(sp5);
+        let shopNew = shop.findAll()
+        for (let i = 0; i < shopNew.length; i++) {
+        }
+        let ProductShop = shop.findAll();
+        for (let i = 0; i < ProductShop.length; i++) {
+            console.log(ProductShop[i].name);
+        }
+    }
+    main()
+
+
+</script>
+</body>
+</html>

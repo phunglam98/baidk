@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Kind {
+    nameKind;
+    featherColor;
+    constructor(nameKindInput, featherColorInput) {
+      this.nameKind = nameKindInput;
+      this.featherColor = featherColorInput
+    }
+    getnameKind(){
+      return this.nameKind
+    }
+    setnameKind(nameKindInput){
+      this.nameKind = nameKindInput;
+    }
+    getfeatherColor(){
+      return this.featherColor;
+    }
+    setfeatherColor(featherColorInput){
+      this.featherColor = featherColorInput;
+    }
+  }
+class Dog {
+      name;
+      age;
+      kinDog;
+      isSick;
+      constructor(nameInput, ageInput, kinDogInput, isSickInput) {
+          this.name = nameInput;
+          this.age = ageInput;
+          this.kinDog = kinDogInput;
+          this.isSick = isSickInput;
+      }
+      getname(){
+          return this.name;
+      }
+      setname(nameInput){
+          this.name = nameInput
+      }
+      getage(){
+          return this.age;
+      }
+      setage(ageInput){
+          this.age = ageInput
+      }
+      getkinDog(){
+          return this.kinDog;
+      }
+      setkinDog(kinDogInput){
+          this.kinDog = kinDogInput;
+
+      }
+
+      getisSick(){
+          return this.isSick
+      }
+      setisSick(isSickInput){
+          this.isSick = isSickInput
+      }
+    checksick() {
+        if (this.isSick) {
+            console.log(this.nameDog + '  đang ốm')
+        } else {
+            console.log(this.nameDog + ' khỏe')
+        }
+    }
+
+
+}
+
+
+
+
+
+
+    function main() {
+        let loai1 = new Kind('nâu', 'poodle')
+        let loai2 = new Kind('trắng', 'husky')
+        let cho1 = new Dog('chó ', 10, loai1, false)
+        cho1.checksick()
+        let cho2 = new Dog('chó', 11, loai2, true)
+        cho2.checksick()
+    }
+
+    main()
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
