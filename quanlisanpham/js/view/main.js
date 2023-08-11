@@ -19,7 +19,7 @@ function showAll() {
             <td>${productInStore[i].name}</td>
             <td>${productInStore[i].quality}</td>
             <td>${productInStore[i].price}</td>
-            <td><button>edit</button></td>
+            <td><button onclick="showFormEdit(${i})">edit</button></td>
             <td><button onclick = "remove(${i})">remove</button></td>
         </tr>`
 
@@ -27,13 +27,13 @@ function showAll() {
     document.getElementById('products').innerHTML = str;
 
 }
-showAll()
+
 
 function add() {
     let id = document.getElementById('id').value;
     let name = document.getElementById('name').value;
-    let quality = document.getElementById('quality');
-    let price = document.getElementById('price');
+    let quality = document.getElementById('quality').value;
+    let price = document.getElementById('price').value;
     let newProduct = new Product(id, name, quality, price);
     store.add(newProduct);
     console.log(store);
@@ -81,25 +81,25 @@ function remove(index) {
     }
 }
 function showFormEdit(index) {
-    document.getElementById('form-add').innerHTML = `
+    document.getElementById('form-edit').innerHTML = `
     <center>
         <h1>Edit</h1>
-        <table border="0.5" style="border: 2px solid>
+        <table border="0.5" style="border: 2px solid">
             <tr>
-                <td>ID:</td>
-                <td><input type="number" value="${productInStore[index]._id}" id="id2"></td>
+                <td>id</td>
+                <td><input type="number"  value="${productInStore[index].id}" id="id2"></td>
             </tr>
             <tr>
                 <td>Name:</td>
-                <td><input type="text" value="${productInStore[index]._name}" id="name2"></td>
+                <td><input type="text" value="${productInStore[index].name}" id="name2"></td>
             </tr>
             <tr>
-                <td>Quantity:</td>
-                <td><input type="number" value="${productInStore[index]._quality}" id="quantity2"></td>
+                <td>Quality:</td>
+                <td><input type="number" value="${productInStore[index].quality}" id="quality2"></td>
             </tr>
             <tr>
                 <td>Price:</td>
-                <td><input type="number" value="${productInStore[index]._price}" id="price2"></td>
+                <td><input type="number" value="${productInStore[index].price}" id="price2"></td>
             </tr>
             <tr>
                 <td colspan="2"><button onclick="edit(${index})">Save</button></td>
@@ -110,10 +110,10 @@ function showFormEdit(index) {
 }
 
 function edit(index) {
-    let id = +document.getElementById('id2').value;
+    let id = document.getElementById('id2').value;
     let name = document.getElementById('name2').value;
-    let quality = +document.getElementById('quality2').value;
-    let price = +document.getElementById('price2').value;
+    let quality = document.getElementById('quality2').value;
+    let price = document.getElementById('price2').value;
     let editProduct = new Product(id, name, quality, price);
     productInStore[index].id = id;
     productInStore[index].name = name;
