@@ -1,4 +1,4 @@
-let store = new Store
+let store = new Store()
 // function main() {
 //     let product = new Product(1,'bánh', 3 , 1000)
 //     store.add(product);
@@ -11,14 +11,17 @@ let store = new Store
 // }
 // main()
 let productInStore = store.findAll()
+
 function showAll() {
     let str = ``;
     for (let i = 0; i < productInStore.length; i++) {
         str += `<tr>
             <td>${productInStore[i].id}</td>
             <td>${productInStore[i].name}</td>
+            <td><img src = "${productInStore[i].img}"></td>
             <td>${productInStore[i].quality}</td>
             <td>${productInStore[i].price}</td>
+            
             <td><button onclick="showFormEdit(${i})">edit</button></td>
             <td><button onclick = "remove(${i})">remove</button></td>
         </tr>`
@@ -32,15 +35,18 @@ function showAll() {
 function add() {
     let id = document.getElementById('id').value;
     let name = document.getElementById('name').value;
+    let img = document.getElementById('img').value;
     let quality = document.getElementById('quality').value;
     let price = document.getElementById('price').value;
-    let newProduct = new Product(id, name, quality, price);
+
+    let newProduct = new Product(id, name, img, quality, price, );
     store.add(newProduct);
     console.log(store);
     // alert("Add Success");
     showAll();
     document.getElementById('form-add').innerHTML = '';
 }
+
 function showFormAdd() {
 
     document.getElementById('form-add').innerHTML =
@@ -56,6 +62,10 @@ function showFormAdd() {
                 <td>Name</td>
                 <td><input type="text" id="name"></td>
             </tr>
+     <tr>
+                <td>Img</td>
+                <td><input type="text" id="img"></td>
+            </tr>
             <tr>
                 <td>Quality</td>
                 <td><input type="number" id="quality"></td>
@@ -64,6 +74,7 @@ function showFormAdd() {
                 <td>Price</td>
                 <td><input type="number" id="price"></td>
             </tr>
+                   
             <tr>
                 <th colspan="2">
                     <button onclick="add()">Add</button>
@@ -73,6 +84,7 @@ function showFormAdd() {
     </center>
     `
 }
+
 function remove(index) {
     let isConfirm = confirm('xóa')
     if (isConfirm) {
@@ -80,6 +92,7 @@ function remove(index) {
         showAll();
     }
 }
+
 function showFormEdit(index) {
     document.getElementById('form-edit').innerHTML = `
     <center>
@@ -92,6 +105,9 @@ function showFormEdit(index) {
             <tr>
                 <td>Name:</td>
                 <td><input type="text" value="${productInStore[index].name}" id="name2"></td>
+            </tr>
+            <td>Img:</td>
+                <td><input type="text" value="${productInStore[index].img}" id="img2"></td>
             </tr>
             <tr>
                 <td>Quality:</td>
@@ -112,15 +128,17 @@ function showFormEdit(index) {
 function edit(index) {
     let id = document.getElementById('id2').value;
     let name = document.getElementById('name2').value;
+    let img = document.getElementById('img2').value;
     let quality = document.getElementById('quality2').value;
     let price = document.getElementById('price2').value;
-    let editProduct = new Product(id, name, quality, price);
+    let editProduct = new Product(id, name, img, quality, price);
     productInStore[index].id = id;
     productInStore[index].name = name;
+    productInStore[index].img = img;
     productInStore[index].quantity = quality;
     productInStore[index].price = price;
     showAll()
-    document.getElementById('form-add').innerHTML = ''
+    document.getElementById('form-edit').innerHTML = ''
 }
 
 

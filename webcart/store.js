@@ -4,7 +4,7 @@ class Store {
     constructor() {
         this.listProduct = [];
     }
-    add(newProduct) {
+    addd(newProduct) {
         this.listProduct.push(newProduct);
     }
 
@@ -14,7 +14,7 @@ class Store {
     remove(index) {
         this.listProduct.splice(index, 1);
     }
-    edit(index, value) {
-        this.listProduct[index] = value;
+    edit(index, newProduct) {
+        this.listProduct[index] = newProduct;
     }
 }

@@ -3,17 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+
 </head>
 <body>
-<script>
-  //function là một tập lệnh để thực hiện 1 chức năng nào đó
-  function getC06(){
-    //tập lệnh
-    return 1;
-    // console.log(1); khi gặp return trả về lạp tức dừng hàm
+<center id="form-add">
+</center>
 
-  }
-  getC06(1,2) // 1 và 2 là đối số
-</script>
+<center id="form-edit">
+</center>
+
+<center>
+  <h1>My store</h1>
+  <button  onclick="showFormAdd()">Add Product</button>
+  <table border="1px">
+    <tr>
+      <th title="text">Id</th>
+      <th>Name</th>
+      <th>Img</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th colspan="2">Action</th>
+    </tr>
+
+    <tbody id="product">
+
+    </tbody>
+  </table>
+</center>
+<script src="product.js"></script>
+<script src="store.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

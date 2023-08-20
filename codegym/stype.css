@@ -1,0 +1,62 @@
+body {
+    background-image: url("../quanlisanpham/img/lgo.jpg");
+    background-size: cover;
+    background-position-y: -70px ;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+#header {
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#logo img {
+    max-width: 70px;
+    height: auto;
+}
+
+#main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-menu li {
+    position: relative;
+}
+
+#main-menu li a {
+    color: aliceblue;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+
+#main-menu > li > a::before {
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: #f00;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#main-menu > li:hover > a::before {
+    width: 100%;
+}
+
+#main-menu .sub-menu li:hover a {
+    color: red;
+}
