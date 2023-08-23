@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    function diemCaoT3(arr) {
+        let lonT1 = 0;
+        let lonT2 = 0;
+        let lonT3 = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > lonT1) {
+                lonT3 = lonT2;
+                lonT2 = lonT1;
+                lonT1 = arr[i];
+            } else if (arr[i] > lonT2 && arr[i] !== lonT1) {
+                lonT3 = lonT2;
+                lonT2 = arr[i];
+            } else if (arr[i] > lonT3 && arr[i] !== lonT1 && arr[i] !== lonT2) {
+                lonT3 = arr[i];
+            }
+        }
+
+        return lonT3;
+    }
+    const array = [2,3,4,5,6,1,8,7,9]
+    console.log("Giá trị lớn thứ 3 là:", diemCaoT3(array));
+
+
+</script>
+</body>
+</html>

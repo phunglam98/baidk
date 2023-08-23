@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log("=== cau 2 ===")
+    function loaiBoTruocIndex(arr, index) {
+        if (index >= 0 && index < arr.length) {
+            const array = [];
+            for (let i = index; i < arr.length; i++) {
+                array.push(arr[i]);
+            }
+            return array;
+        } else {
+            return arr;
+        }
+    }
+
+    const mangBanDau = [10, 20, 30, 40, 50, 60];
+    const index = 2;
+    console.log("Mảng sau khi loại bỏ:", loaiBoTruocIndex(mangBanDau, index));
+
+    console.log("=== cau 3 ===")
+</script>
+</body>
+</html>
