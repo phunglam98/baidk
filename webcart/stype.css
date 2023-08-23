@@ -7,10 +7,10 @@
 body{
     background-color: #FFA16C;
     font-family: system-ui;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .container{
-    width: 800px;
+    width: 1000px;
     border: 1px solid #ffffff;
     max-width: 100%;
     margin: 50px auto 0;
@@ -23,7 +23,8 @@ body{
 .container .menu{
     background-color: #ffffff;
     border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-botton-right-radius: 30px;
+
 }
 /*.container .cart{*/
 /*    background-color: #ffffff;*/
@@ -34,7 +35,12 @@ body{
     background-color: #eeeded;
     border-right: 1px solid #eeeded;
     border-right: 1px solid #eeeded;
+    border-top-right-radius: 30px;
+
 }
+
+
+
 .menu .logo{
     padding: 20px;
     font-family: 'Lobster', cursive;
@@ -66,10 +72,11 @@ body{
     border-right: 2px solid #FFA16C;
 }
 
-.center .add{
+.center .search{
     background-color: #ffffff;
     padding: 20px;
     height: 40px;
+    border-top-right-radius: 30px;
 }
 .center .add .form{
     width: max-content;
@@ -84,3 +91,4 @@ body{
     outline:  none;
     width: 200px;
 }
+

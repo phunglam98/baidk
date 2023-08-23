@@ -1,4 +1,5 @@
-let store = new Store()
+// localStorage.setItem('listProduct', JSON.stringify([]));
+// localStorage.setItem('catList', JSON.stringify([]));
 // function main() {
 //     let product = new Product(1,'bánh', 3 , 1000)
 //     store.add(product);
@@ -10,6 +11,7 @@ let store = new Store()
 //
 // }
 // main()
+let store = new Store()
 let productInStore = store.findAll()
 
 function showAll() {
@@ -33,17 +35,18 @@ function showAll() {
 
 
 function add() {
+    // alert("Linh")
     let id = document.getElementById('id').value;
     let name = document.getElementById('name').value;
     let img = document.getElementById('img').value;
     let quality = document.getElementById('quality').value;
     let price = document.getElementById('price').value;
 
-    let newProduct = new Product(id, name, img, quality, price, );
+    let newProduct = new Product(id, name, img, quality, price);
     store.add(newProduct);
     console.log(store);
     // alert("Add Success");
-    showAll();
+    showAll()
     document.getElementById('form-add').innerHTML = '';
 }
 
@@ -53,6 +56,7 @@ function showFormAdd() {
         `
             <center>
         <h1>Add Product</h1>
+        <div>
         <table>
             <tr>
                 <td>Id</td>
@@ -62,7 +66,7 @@ function showFormAdd() {
                 <td>Name</td>
                 <td><input type="text" id="name"></td>
             </tr>
-     <tr>
+            <tr>
                 <td>Img</td>
                 <td><input type="text" id="img"></td>
             </tr>
@@ -74,7 +78,6 @@ function showFormAdd() {
                 <td>Price</td>
                 <td><input type="number" id="price"></td>
             </tr>
-                   
             <tr>
                 <th colspan="2">
                     <button onclick="add()">Add</button>
@@ -82,9 +85,10 @@ function showFormAdd() {
             </tr>
         </table>
     </center>
+    </div>
     `
-}
 
+}
 function remove(index) {
     let isConfirm = confirm('xóa')
     if (isConfirm) {
@@ -97,7 +101,7 @@ function showFormEdit(index) {
     document.getElementById('form-edit').innerHTML = `
     <center>
         <h1>Edit</h1>
-        <table border="0.5" style="border: 2px solid">
+        <table border="0.5" style="border: 1px solid">
             <tr>
                 <td>id</td>
                 <td><input type="number"  value="${productInStore[index].id}" id="id2"></td>
@@ -140,5 +144,40 @@ function edit(index) {
     showAll()
     document.getElementById('form-edit').innerHTML = ''
 }
-
+// function search() {
+//     let value = document.getElementById('search1').value;
+//     let productOfStore = store.search(value);
+//     let str = ''
+//     for (let i = 0; i < productOfStore.length; i++) {
+//         str += `
+//         <table>
+//             <tr>
+//                 <td>id</td>
+//                 <td><input type="number"  value="${productInStore[index].id}" id="id2"></td>
+//             </tr>
+//             <tr>
+//                 <td>Name:</td>
+//                 <td><input type="text" value="${productInStore[index].name}" id="name2"></td>
+//             </tr>
+//             <td>Img:</td>
+//             <td><input type="text" value="${productInStore[index].img}" id="img2"></td>
+//         </tr>
+//         <tr>
+//             <td>Quality:</td>
+//             <td><input type="number" value="${productInStore[index].quality}" id="quality2"></td>
+//         </tr>
+//         <tr>
+//             <td>Price:</td>
+//             <td><input type="number" value="${productInStore[index].price}" id="price2"></td>
+//         </tr>
+//         <tr>
+//         <td><button onclick="showFormEdit(${i})">edit</button></td>
+//             <td><button onclick = "remove(${i})">remove</button></td>
+// </tr>
+//         </table>`
+//
+//     }
+//     document.getElementById('products1').innerHTML = str
+//
+// }
 
